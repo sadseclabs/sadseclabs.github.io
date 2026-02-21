@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SADSEC LABS | Researching...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,500&family=Inter:wght@400;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+    <style>
+         :root {
+            --void: #050505;
+            --rust: #ff4d00;
+            --zinc-border: #1c1c1e;
+        }
+        
+        body {
+            background-color: var(--void);
+            color: #f2f2f2;
+            font-family: "Inter", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        
+        .mono {
+            font-family: "JetBrains Mono", monospace;
+        }
+        /* LED Activity Blinking */
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .led-green {
+            fill: #22c55e;
+            animation: blink 0.8s infinite;
+        }
+        
+        .led-orange {
+            fill: var(--rust);
+            animation: blink 1.2s infinite;
+        }
+        
+        .led-blue {
+            fill: #3b82f6;
+            animation: blink 1.5s infinite;
+        }
+        /* HIGH-VELOCITY Data Pulse Animation */
+        
+        @keyframes pulseData {
+            0% {
+                stroke-dashoffset: 100;
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            95% {
+                opacity: 1;
+            }
+            100% {
+                stroke-dashoffset: 0;
+                opacity: 0;
+            }
+        }
+        
+        .wire-pulse {
+            stroke-dasharray: 15, 85;
+            animation: pulseData 0.5s infinite linear;
+        }
+        
+        .svg-container {
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            margin: 0 auto;
+        }
+        
+        .link-hover:hover {
+            color: var(--rust);
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- HEADER -->
+    <a href="./index.html" class="header-brand">
+        <nav class="w-full p-6 md:p-10 flex-shrink-0">
+            <div class="max-w-7xl mx-auto flex items-center gap-4 md:gap-5">
+                <svg width="45" height="45" viewBox="0 0 100 100" class="md:w-[50px] md:h-[50px]" fill="none">
+            <rect
+              x="4"
+              y="4"
+              width="92"
+              height="92"
+              rx="4"
+              stroke="#1c1c1e"
+              stroke-width="8"
+            />
+            <rect x="22" y="25" width="6" height="50" rx="1" fill="#3f3f46" />
+            <rect x="37" y="25" width="6" height="50" rx="1" fill="#71717a" />
+            <rect x="48" y="15" width="10" height="70" rx="2" fill="#FF4D00" />
+            <rect x="63" y="25" width="6" height="50" rx="1" fill="#71717a" />
+            <rect x="78" y="25" width="6" height="50" rx="1" fill="#3f3f46" />
+          </svg>
+                <div class="flex items-baseline">
+                    <span class="text-xl md:text-2xl font-black tracking-tighter uppercase">SADSEC</span
+            >
+            <span
+              class="ml-2 text-[10px] md:text-xs font-bold text-[#FF4D00] mono tracking-[0.2em] md:tracking-[0.3em]"
+              >[LABS]</span
+            >
+          </div>
+        </div>
+      </nav>
+    </a>
+
+    <!-- MAIN -->
+    <main
+      class="flex-grow flex flex-col items-center justify-center p-6 md:p-10 overflow-y-auto"
+    >
+      <div class="svg-container">
+        <svg
+          viewBox="0 0 850 350"
+          preserveAspectRatio="xMidYMid meet"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-full h-auto"
+        >
+          <defs>
+            <linearGradient id="rackGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1c1c1e" />
+              <stop offset="100%" stop-color="#0a0a0b" />
+            </linearGradient>
+            <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#050505" />
+              <stop offset="100%" stop-color="#0d0d0f" />
+            </linearGradient>
+          </defs>
+
+          <!-- SERVER RACK -->
+          <rect
+            x="50"
+            y="20"
+            width="160"
+            height="320"
+            rx="4"
+            fill="url(#rackGrad)"
+            stroke="#27272a"
+            stroke-width="2"
+          />
+          <rect
+            x="60"
+            y="40"
+            width="140"
+            height="30"
+            rx="2"
+            fill="#000"
+            stroke="#1c1c1e"
+          />
+          <circle cx="75" cy="55" r="2.5" class="led-green" />
+          <rect
+            x="60"
+            y="80"
+            width="140"
+            height="30"
+            rx="2"
+            fill="#000"
+            stroke="#1c1c1e"
+          />
+          <circle cx="75" cy="95" r="2.5" class="led-blue" />
+          <rect
+            x="60"
+            y="120"
+            width="140"
+            height="30"
+            rx="2"
+            fill="#000"
+            stroke="#1c1c1e"
+          />
+          <circle cx="75" cy="135" r="2.5" class="led-orange" />
+
+          <!-- ROUTER -->
+          <rect
+            x="300"
+            y="20"
+            width="280"
+            height="45"
+            rx="2"
+            fill="#161618"
+            stroke="#27272a"
+          />
+          <circle cx="320" cy="42" r="2" class="led-green" />
+          <circle
+            cx="335"
+            cy="42"
+            r="2"
+            class="led-green"
+            style="animation-delay: 0.2s"
+          />
+          <circle cx="350" cy="42" r="2" class="led-orange" />
+
+          <!-- WORKSTATION (Floating Screen) -->
+          <rect
+            x="630"
+            y="80"
+            width="200"
+            height="150"
+            rx="6"
+            fill="url(#screenGrad)"
+            stroke="#27272a"
+            stroke-width="4"
+          />
+          <rect x="642" y="92" width="176" height="126" rx="2" fill="#000" />
+          <rect
+            x="655"
+            y="110"
+            width="60"
+            height="3"
+            fill="#FF4D00"
+            opacity="0.4"
+          />
+          <rect
+            x="655"
+            y="120"
+            width="90"
+            height="3"
+            fill="#f2f2f2"
+            opacity="0.1"
+          />
+
+          <!-- WIRES -->
+          <path
+            d="M210 55C350 55 350 42 300 42"
+            stroke="#1c1c1e"
+            stroke-width="3"
+            fill="none"
+          />
+          <path
+            d="M580 42C680 42 680 80 630 80"
+            stroke="#1c1c1e"
+            stroke-width="3"
+            fill="none"
+          />
+
+          <!-- DATA PULSES -->
+          <path
+            d="M210 55C350 55 350 42 300 42"
+            stroke="#FF4D00"
+            stroke-width="1.5"
+            fill="none"
+            class="wire-pulse"
+          />
+          <path
+            d="M210 55C350 55 350 42 300 42"
+            stroke="#FF4D00"
+            stroke-width="1.5"
+            fill="none"
+            class="wire-pulse"
+            style="animation-delay: 0.2s"
+          />
+          <path
+            d="M580 42C680 42 680 80 630 80"
+            stroke="#FF4D00"
+            stroke-width="1.5"
+            fill="none"
+            class="wire-pulse"
+            style="animation-delay: 0.1s"
+          />
+          <path
+            d="M580 42C680 42 680 80 630 80"
+            stroke="#FF4D00"
+            stroke-width="1.5"
+            fill="none"
+            class="wire-pulse"
+            style="animation-delay: 0.35s"
+          />
+        </svg>
+      </div>
+
+      <!-- STATEMENTS -->
+      <div class="text-center mt-10 md:mt-12 max-w-2xl space-y-4 px-6">
+        <p
+          class="text-sm md:text-base text-zinc-400 leading-relaxed font-medium"
+        >
+          SadSecLabs is a systems security research and engineering lab building
+          advanced, AI-powered security systems, platforms, and tools for modern
+          computing environments.
+        </p>
+        <h2
+          class="text-base md:text-lg font-medium tracking-tight text-zinc-600 italic leading-relaxed"
+        >
+          The lab is currently developing its first flagship product.
+        </h2>
+
+        <div class="pt-6">
+          <p
+            class="text-[12px] md:text-xs text-zinc-500 font-medium tracking-wide"
+          >
+            We collaborate with select organizations on advanced security
+            engineering and custom intelligence systems.
+          </p>
+
+          <p
+            class="text-[12px] md:text-xs text-zinc-500 font-medium tracking-wide mt-2"
+          >
+            Inquiries:
+            <a
+              href="mailto:sudo@sadseclabs.com"
+              class="text-zinc-300 hover:text-[#FF4D00] transition-colors underline underline-offset-4"
+            >
+              sudo@sadseclabs.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full p-6 md:p-10 border-t border-[#1c1c1e] flex-shrink-0">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <span
+          class="text-[9px] md:text-[10px] mono tracking-[0.3em] text-zinc-700 uppercase"
+        >
+          &copy; 2026 SADSEC LABS
+        </span>
+                    <div class="flex gap-8 text-[10px] mono tracking-[0.2em] text-zinc-500 uppercase">
+                        <a href="https://github.com/sadseclabs" target="_blank" class="link-hover">GitHub</a
+          >
+          <a href="https://x.com/sadseclabs" target="_blank" class="link-hover"
+            >X</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
