@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 // NOT FOUND</title>
+    <title>PRODUCTS | SADSEC LABS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=JetBrains+Mono:wght@500&display=swap"
@@ -32,10 +32,20 @@
         color: var(--rust);
         transition: color 0.3s ease;
       }
+
+      .status-dot {
+        height: 6px;
+        width: 6px;
+        background-color: var(--rust);
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 0 8px var(--rust);
+      }
     </style>
   </head>
 
-  <body class="antialiased text-center">
+  <body class="antialiased">
     <!-- HEADER -->
     <a href="./index.html" class="header-brand">
       <nav class="w-full p-6 md:p-10 flex-shrink-0">
@@ -77,22 +87,48 @@
     </a>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-grow flex flex-col items-center justify-center p-6">
-      <h1
-        class="text-8xl md:text-9xl font-black text-[#FF4D00] tracking-tighter"
-      >
-        404
-      </h1>
-      <p
-        class="text-sm mono tracking-[0.3em] text-zinc-500 uppercase mt-4 mb-10"
-      >
-        Resource not found
-      </p>
-      <a
-        href="./index.html"
-        class="px-8 py-3 border border-zinc-700 text-zinc-300 hover:bg-zinc-900 transition-all uppercase text-xs tracking-widest mono"
-        >Return Home</a
-      >
+    <main class="flex-grow flex items-center justify-center p-6">
+      <div class="max-w-2xl w-full">
+        <h1
+          class="text-[10px] mono tracking-[0.5em] text-zinc-600 uppercase mb-12"
+        >
+          // System R&D
+        </h1>
+
+        <div class="space-y-12">
+          <!-- PRODUCT: AEGIS -->
+          <div
+            class="border border-[#1c1c1e] p-8 md:p-12 rounded-sm bg-[#080808]"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <div>
+                <h2
+                  class="text-3xl md:text-4xl font-black tracking-tighter uppercase"
+                >
+                  AEGIS
+                </h2>
+                <p
+                  class="text-[10px] mono text-zinc-500 uppercase tracking-widest mt-2"
+                >
+                  Flagship Product
+                </p>
+              </div>
+              <div
+                class="flex items-center text-[10px] mono text-[#FF4D00] uppercase tracking-widest"
+              >
+                <span class="status-dot"></span> In Development
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs text-zinc-600 italic text-center md:text-left">
+            The lab is currently developing its first flagship product. More
+            intelligence will be de-classified soon.
+          </p>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -107,7 +143,9 @@
           class="flex gap-8 text-[10px] mono tracking-[0.2em] text-zinc-500 uppercase"
         >
           <a href="./about.html" class="link-hover">About</a>
-          <a href="./products.html" class="link-hover">Products</a>
+          <a href="./products.html" class="link-hover text-[#FF4D00]"
+            >Products</a
+          >
           <a href="./team.html" class="link-hover">Team</a>
           <a href="./contact.html" class="link-hover">Contact</a>
           <a

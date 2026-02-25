@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 // NOT FOUND</title>
+    <title>TEAM | SADSEC LABS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=JetBrains+Mono:wght@500&display=swap"
@@ -32,10 +32,23 @@
         color: var(--rust);
         transition: color 0.3s ease;
       }
+
+      .headshot {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #0d0d0e;
+        border: 1px solid #1c1c1e;
+        margin-bottom: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
 
-  <body class="antialiased text-center">
+  <body class="antialiased">
     <!-- HEADER -->
     <a href="./index.html" class="header-brand">
       <nav class="w-full p-6 md:p-10 flex-shrink-0">
@@ -76,23 +89,55 @@
       </nav>
     </a>
 
-    <!-- MAIN CONTENT -->
-    <main class="flex-grow flex flex-col items-center justify-center p-6">
-      <h1
-        class="text-8xl md:text-9xl font-black text-[#FF4D00] tracking-tighter"
-      >
-        404
-      </h1>
-      <p
-        class="text-sm mono tracking-[0.3em] text-zinc-500 uppercase mt-4 mb-10"
-      >
-        Resource not found
-      </p>
-      <a
-        href="./index.html"
-        class="px-8 py-3 border border-zinc-700 text-zinc-300 hover:bg-zinc-900 transition-all uppercase text-xs tracking-widest mono"
-        >Return Home</a
-      >
+    <!-- MAIN CONTENT-->
+    <main class="flex-grow flex items-center p-6">
+      <div class="max-w-4xl mx-auto w-full">
+        <h1
+          class="text-[10px] mono tracking-[0.5em] text-zinc-600 uppercase mb-12"
+        >
+          // Co-Founders
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="flex flex-col items-start">
+            <div class="headshot">
+              <img
+                src="assets/sam.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h2 class="text-xl font-black uppercase tracking-tight">Sam</h2>
+            <p
+              class="text-[10px] mono text-[#FF4D00] uppercase tracking-widest mb-3"
+            >
+              Co-Founder
+            </p>
+            <p class="text-zinc-400 leading-relaxed text-sm max-w-xs">
+              Self-taught Polymath
+            </p>
+          </div>
+          <div class="flex flex-col items-start">
+            <div class="headshot">
+              <img
+                src="assets/Abdulhafeez.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h2 class="text-xl font-black uppercase tracking-tight">
+              Abdulhafeez
+            </h2>
+            <p
+              class="text-[10px] mono text-[#FF4D00] uppercase tracking-widest mb-3"
+            >
+              Co-Founder
+            </p>
+            <p class="text-zinc-400 leading-relaxed text-sm max-w-xs">
+              Cybersecurity Engineer
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -108,7 +153,7 @@
         >
           <a href="./about.html" class="link-hover">About</a>
           <a href="./products.html" class="link-hover">Products</a>
-          <a href="./team.html" class="link-hover">Team</a>
+          <a href="./team.html" class="link-hover text-[#FF4D00]">Team</a>
           <a href="./contact.html" class="link-hover">Contact</a>
           <a
             href="https://github.com/sadseclabs"

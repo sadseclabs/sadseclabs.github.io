@@ -1,102 +1,109 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SADSEC LABS | Researching...</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,500&family=Inter:wght@400;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,500&family=Inter:wght@400;900&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <style>
-         :root {
-            --void: #050505;
-            --rust: #ff4d00;
-            --zinc-border: #1c1c1e;
-        }
-        
-        body {
-            background-color: var(--void);
-            color: #f2f2f2;
-            font-family: "Inter", sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-        }
-        
-        .mono {
-            font-family: "JetBrains Mono", monospace;
-        }
-        /* LED Activity Blinking */
-        
-        @keyframes blink {
-            0%,
-            100% {
-                opacity: 0.3;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-        
-        .led-green {
-            fill: #22c55e;
-            animation: blink 0.8s infinite;
-        }
-        
-        .led-orange {
-            fill: var(--rust);
-            animation: blink 1.2s infinite;
-        }
-        
-        .led-blue {
-            fill: #3b82f6;
-            animation: blink 1.5s infinite;
-        }
-        /* HIGH-VELOCITY Data Pulse Animation */
-        
-        @keyframes pulseData {
-            0% {
-                stroke-dashoffset: 100;
-                opacity: 0;
-            }
-            5% {
-                opacity: 1;
-            }
-            95% {
-                opacity: 1;
-            }
-            100% {
-                stroke-dashoffset: 0;
-                opacity: 0;
-            }
-        }
-        
-        .wire-pulse {
-            stroke-dasharray: 15, 85;
-            animation: pulseData 0.5s infinite linear;
-        }
-        
-        .svg-container {
-            width: 100%;
-            max-width: 850px;
-            height: auto;
-            margin: 0 auto;
-        }
-        
-        .link-hover:hover {
-            color: var(--rust);
-            transition: color 0.3s ease;
-        }
-    </style>
-</head>
+      :root {
+        --void: #050505;
+        --rust: #ff4d00;
+        --zinc-border: #1c1c1e;
+      }
 
-<body class="antialiased">
+      body {
+        background-color: var(--void);
+        color: #f2f2f2;
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+      }
+
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+      /* LED Activity Blinking */
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .led-green {
+        fill: #22c55e;
+        animation: blink 0.8s infinite;
+      }
+
+      .led-orange {
+        fill: var(--rust);
+        animation: blink 1.2s infinite;
+      }
+
+      .led-blue {
+        fill: #3b82f6;
+        animation: blink 1.5s infinite;
+      }
+
+      @keyframes pulseData {
+        0% {
+          stroke-dashoffset: 100;
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 0;
+        }
+      }
+
+      .wire-pulse {
+        stroke-dasharray: 15, 85;
+        animation: pulseData 0.5s infinite linear;
+      }
+
+      .svg-container {
+        width: 100%;
+        max-width: 850px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .link-hover:hover {
+        color: var(--rust);
+        transition: color 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body class="antialiased">
     <!-- HEADER -->
     <a href="./index.html" class="header-brand">
-        <nav class="w-full p-6 md:p-10 flex-shrink-0">
-            <div class="max-w-7xl mx-auto flex items-center gap-4 md:gap-5">
-                <svg width="45" height="45" viewBox="0 0 100 100" class="md:w-[50px] md:h-[50px]" fill="none">
+      <nav class="w-full p-6 md:p-10 flex-shrink-0">
+        <div class="max-w-7xl mx-auto flex items-center gap-4 md:gap-5">
+          <svg
+            width="45"
+            height="45"
+            viewBox="0 0 100 100"
+            class="md:w-[50px] md:h-[50px]"
+            fill="none"
+          >
             <rect
               x="4"
               y="4"
@@ -112,8 +119,10 @@
             <rect x="63" y="25" width="6" height="50" rx="1" fill="#71717a" />
             <rect x="78" y="25" width="6" height="50" rx="1" fill="#3f3f46" />
           </svg>
-                <div class="flex items-baseline">
-                    <span class="text-xl md:text-2xl font-black tracking-tighter uppercase">SADSEC</span
+          <div class="flex items-baseline">
+            <span
+              class="text-xl md:text-2xl font-black tracking-tighter uppercase"
+              >SADSEC</span
             >
             <span
               class="ml-2 text-[10px] md:text-xs font-bold text-[#FF4D00] mono tracking-[0.2em] md:tracking-[0.3em]"
@@ -289,54 +298,34 @@
 
       <!-- STATEMENTS -->
       <div class="text-center mt-10 md:mt-12 max-w-2xl space-y-4 px-6">
-        <p
-          class="text-sm md:text-base text-zinc-400 leading-relaxed font-medium"
-        >
-          SadSecLabs is a systems security research and engineering lab building
-          advanced, AI-powered security systems, platforms, and tools for modern
-          computing environments.
-        </p>
         <h2
           class="text-base md:text-lg font-medium tracking-tight text-zinc-600 italic leading-relaxed"
         >
           The lab is currently developing its first flagship product.
         </h2>
-
-        <div class="pt-6">
-          <p
-            class="text-[12px] md:text-xs text-zinc-500 font-medium tracking-wide"
-          >
-            We collaborate with select organizations on advanced security
-            engineering and custom intelligence systems.
-          </p>
-
-          <p
-            class="text-[12px] md:text-xs text-zinc-500 font-medium tracking-wide mt-2"
-          >
-            Inquiries:
-            <a
-              href="mailto:sudo@sadseclabs.com"
-              class="text-zinc-300 hover:text-[#FF4D00] transition-colors underline underline-offset-4"
-            >
-              sudo@sadseclabs.com
-            </a>
-          </p>
-        </div>
       </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="w-full p-6 md:p-10 border-t border-[#1c1c1e] flex-shrink-0">
+    <footer class="w-full p-6 md:p-10 border-t border-[#1c1c1e] mt-auto">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
       >
-        <span
-          class="text-[9px] md:text-[10px] mono tracking-[0.3em] text-zinc-700 uppercase"
+        <span class="text-[9px] mono tracking-[0.3em] text-zinc-700 uppercase"
+          >&copy; 2026 SADSEC LABS</span
         >
-          &copy; 2026 SADSEC LABS
-        </span>
-                    <div class="flex gap-8 text-[10px] mono tracking-[0.2em] text-zinc-500 uppercase">
-                        <a href="https://github.com/sadseclabs" target="_blank" class="link-hover">GitHub</a
+        <div
+          class="flex gap-8 text-[10px] mono tracking-[0.2em] text-zinc-500 uppercase"
+        >
+          <a href="./about.html" class="link-hover">About</a>
+          <a href="./products.html" class="link-hover">Products</a>
+          <a href="./team.html" class="link-hover">Team</a>
+          <a href="./contact.html" class="link-hover">Contact</a>
+          <a
+            href="https://github.com/sadseclabs"
+            target="_blank"
+            class="link-hover"
+            >GitHub</a
           >
           <a href="https://x.com/sadseclabs" target="_blank" class="link-hover"
             >X</a
